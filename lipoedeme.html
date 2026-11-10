@@ -1,111 +1,156 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lipœdème - Technique Houyoux - Dr Stéphan Houyoux</title>
-<meta name="description" content="Lipœdème : le Dr Stéphan Houyoux élimine la graisse douloureuse avec une canule qu'il a mise au point, en respectant la vascularisation et la trame conjonctive. Centre de Liposculpture de Vich.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body class="lp">
+<title>Lipœdème - Dr Stéphan Houyoux</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
+<style>/* Maquette dr-houyoux.ch : codes du site actuel (Varela Round, Varela, Roboto, menthe)
+   + finitions inspirées d'Emil Kowalski (sobriété, transitions douces) */
+:root{--mint:#7ECBAB;--btn:#61CEAF;--btn-dark:#4FB596;--nav:#388B7E;--h:#347572;--text:#7A7A7A;--ink:#4B4F58;--bg:#F7F8F9;--line:#E4ECE9;
+--ease:cubic-bezier(.23,1,.32,1);--shadow:0 1px 2px rgba(52,117,114,.06),0 8px 24px -12px rgba(52,117,114,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Roboto,Arial,sans-serif;font-size:16px;line-height:1.8;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--nav)}
+figure{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.topbar{background:var(--mint);color:#fff;font-size:15px}
+.topbar .wrap{display:flex;justify-content:center;height:44px;align-items:center}
+.topbar span{padding:0 24px;border-left:1px solid rgba(255,255,255,.55)}
+.topbar span:first-child{border:0}
+.header{background:linear-gradient(90deg,#fff 0%,#fff 35%,#d4ebe1 65%,var(--mint) 100%);box-shadow:0 6px 16px -10px rgba(0,0,0,.3);position:relative;z-index:3}
+.header .wrap{max-width:1360px;display:flex;align-items:center;justify-content:space-between;height:120px}
+.header img.logo{height:92px;width:auto}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-family:'Varela Round',sans-serif;font-size:15px;font-weight:500;text-transform:uppercase;color:var(--nav);text-decoration:none;white-space:nowrap;position:relative;padding:6px 0}
+.nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--nav);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a.on::after{transform:scaleX(1)}
+@media (hover:hover){.nav a:not(.cta):hover::after{transform:scaleX(1)}}
+.btn,.nav a.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--btn);color:#fff;font-family:Roboto,sans-serif;font-weight:500;font-size:14px;letter-spacing:.6px;text-transform:uppercase;text-decoration:none;padding:14px 24px;border-radius:4px;transition:transform .16s var(--ease),background-color .2s}
+.btn:active,.nav a.cta:active{transform:scale(.97)}
+@media (hover:hover){.btn:hover,.nav a.cta:hover{background:var(--btn-dark)}}
+.banner{height:280px;background:linear-gradient(90deg,#5fae96 0%,#7ECBAB 55%,#a9dcc6 100%);display:flex;align-items:center;justify-content:center;position:relative}
+.banner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.25))}
+.banner h1{position:relative;margin:0;color:#fff;font-weight:100;font-size:clamp(60px,10vw,150px);letter-spacing:-4px;text-transform:uppercase;line-height:1}
+.sec{padding:96px 0}
+.sec.grey{background:var(--bg)}
+h2{font-family:Varela,sans-serif;font-weight:600;font-size:27px;color:var(--h);text-transform:uppercase;margin:0 0 18px;letter-spacing:.3px}
+h3{font-family:Varela,sans-serif;font-weight:600;font-size:19px;color:var(--h);margin:0 0 8px}
+.kicker{font-family:'Varela Round',sans-serif;color:var(--btn-dark);font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
+.lead{font-size:18px;max-width:760px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.split img{border-radius:10px;box-shadow:var(--shadow);background:#e9f1ee;min-height:260px;object-fit:cover}
+p{margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;text-align:left}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border-radius:12px;padding:26px 24px;box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+@media (hover:hover){.card:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(52,117,114,.06),0 18px 40px -18px rgba(52,117,114,.35)}}
+.card .n{font-weight:100;font-size:44px;line-height:1;color:var(--btn);margin-bottom:12px}
+.card p{font-size:15px;line-height:1.7;margin:0}
+.quote{border-left:3px solid var(--btn);background:var(--bg);border-radius:0 10px 10px 0;padding:24px 28px;margin-top:34px;font-size:17px;color:var(--ink);font-style:italic}
+.sec.grey .quote{background:#fff}
+.quote b{font-style:normal;color:var(--h);display:block;margin-top:10px;font-size:14px;font-family:'Varela Round'}
+.yt{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,60,55,.55);margin-top:36px;background:#1d2b28}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.vids video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;background:#1d2b28;box-shadow:var(--shadow)}
+.vids figcaption{font-size:14px;margin-top:8px;text-align:center}
+.badge{display:inline-flex;gap:8px;align-items:center;background:#E8F6F0;color:var(--h);border-radius:999px;padding:6px 14px;font-size:14px;font-family:'Varela Round'}
+.tabs{display:inline-flex;position:relative;background:#fff;border-radius:999px;padding:4px;margin:26px 0 30px;box-shadow:var(--shadow)}
+.tabs button{position:relative;z-index:1;border:0;background:transparent;font-family:'Varela Round';font-size:15px;color:var(--nav);padding:10px 22px;border-radius:999px;cursor:pointer;transition:color .25s}
+.tabs button[aria-selected=true]{color:#fff}
+.tabs .ind{position:absolute;top:4px;left:4px;height:calc(100% - 8px);border-radius:999px;background:var(--btn);transition:transform .35s var(--ease),width .35s var(--ease)}
+.panel{display:none}.panel.on{display:block;animation:in .45s var(--ease)}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.gallery img{width:100%;border-radius:10px;box-shadow:var(--shadow);background:#e9f1ee;min-height:200px;object-fit:cover}
+.note{font-size:13px;line-height:1.6;color:#9a9a9a;margin-top:24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.step{background:#fff;border-radius:12px;padding:26px 24px;box-shadow:var(--shadow);counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#E8F6F0;color:var(--h);font-family:'Varela Round';margin-bottom:14px}
+.step p{margin:0;font-size:15px;line-height:1.7}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-family:Varela;font-weight:600;color:var(--h);font-size:18px;text-transform:uppercase}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary i{width:28px;height:28px;border-radius:50%;background:#E8F6F0;position:relative;flex-shrink:0;transition:transform .3s var(--ease)}
+.acc summary i::before,.acc summary i::after{content:"";position:absolute;left:8px;right:8px;top:13px;height:2px;background:var(--h)}
+.acc summary i::after{transform:rotate(90deg)}
+.acc details[open] summary i{transform:rotate(45deg)}
+.acc .body{padding:0 0 22px}
+.rdv{background:linear-gradient(120deg,var(--mint),#a6dcc5);color:#fff;text-align:center;padding:80px 0}
+.rdv h2{color:#fff;font-size:34px}
+.rdv p{color:#f3fbf7;max-width:660px;margin:0 auto 28px;font-size:17px}
+.rdv .btn{background:#fff;color:var(--h);margin:6px}
+.rdv .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+footer{background:#3f4a48;color:#c9d3d0;text-align:center;font-size:14px;padding:28px}
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+@media (max-width:960px){.nav a:not(.cta){display:none}.split,.cards,.cards.three,.steps,.vids,.gallery{grid-template-columns:1fr}.sec{padding:64px 0}}
+
+.deonto{background:#fff;border:1px solid var(--line);border-left:4px solid var(--btn);border-radius:10px;padding:20px 24px;font-size:14px;line-height:1.7;color:#6a6a6a;margin:0 0 28px}
+.deonto b{display:block;color:var(--h);font-family:Varela;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.wa{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-family:Roboto,sans-serif;font-weight:500;font-size:15px;padding:13px 18px 13px 14px;border-radius:999px;box-shadow:0 10px 24px -8px rgba(0,0,0,.35);transition:transform .16s cubic-bezier(.23,1,.32,1)}.wa:active{transform:scale(.97)}.wa svg{width:24px;height:24px;flex-shrink:0}@media(max-width:600px){.wa span{display:none}.wa{padding:14px}}.vwrap{position:relative;border-radius:12px;overflow:hidden}.vwrap video{display:block}.vveil{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:22px;text-align:center;background:rgba(60,70,68,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#fff;font-size:14px;line-height:1.55;transition:opacity .35s cubic-bezier(.23,1,.32,1)}.vveil b{font-family:Varela;text-transform:uppercase;letter-spacing:1px;font-size:13px}.vveil button{border:0;background:#fff;color:#347572;font-family:Roboto,sans-serif;font-weight:500;font-size:14px;letter-spacing:.5px;text-transform:uppercase;padding:11px 22px;border-radius:4px;cursor:pointer;transition:transform .16s cubic-bezier(.23,1,.32,1)}.vveil button:active{transform:scale(.97)}.vveil.off{opacity:0;pointer-events:none}</style></head><body>
 <div class="topbar"><div class="wrap"><span>079 596 63 04</span><span>contact@dr-houyoux.ch</span><span>FR</span><span>EN</span></div></div>
-<header class="header"><div class="wrap"><a href="https://dr-houyoux.ch/"><img class="logo" src="logo.jpg" width="400" height="123" alt="Dr Stéphan Houyoux"></a>
-<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-<nav class="nav" id="menu"><a href="liposculpture.html">Liposculpture</a><a href="lipoedeme.html" class="on">Lipœdème</a><a href="https://dr-houyoux.ch/formations/">Formations</a><a href="https://dr-houyoux.ch/consultations-en-belgique/">Consultations en Belgique</a><a class="cta" href="#rdv">Demander un devis</a></nav></div></header>
+<header class="header"><div class="wrap"><a href="https://dr-houyoux.ch/"><img class="logo" src="https://dr-houyoux.ch/wp-content/uploads/2020/02/logo.png" alt="Dr Stéphan Houyoux"></a>
+<nav class="nav"><a href="liposculpture.html">Liposculpture</a><a href="lipoedeme.html" class="on">Lipœdème</a><a href="belgique.html">Consultations en Belgique</a><a class="cta" href="#rdv">Demander un devis</a></nav></div></header>
+<section class="banner"><h1>Lipoedème</h1></section>
+<section class="sec"><div class="wrap split reveal">
+<div><div class="kicker">Dr Stéphan Houyoux</div><h2>Une référence dans le traitement du lipœdème</h2>
+<p>Après plus de 27 ans de pratique de la liposculpture, plus de 90 % de mes interventions concernent aujourd'hui le lipœdème, grâce à la canule que j'ai mise au point.</p>
+<p>Chaque patiente est reçue personnellement, avec le temps nécessaire pour comprendre sa situation et lui expliquer ma technique.</p></div>
+<img src="dr-houyoux-bureau.jpg" alt="Le Dr Stéphan Houyoux dans son cabinet" style="width:100%;height:auto;border-radius:12px;box-shadow:0 18px 40px -18px rgba(20,60,55,.45)"></div></section>
 
-<!-- 1. HERO (arrivée depuis la publicité) : technique unique + portrait + citation + CTA -->
-<section class="lp-hero"><div class="wrap lp-hero-grid">
-<div class="lp-hero-txt reveal">
-<div class="kicker">Lipœdème · Technique Houyoux</div>
-<h1>Lipœdème : enlever la graisse qui fait mal, en respectant vos tissus.</h1>
-<p class="lp-sub">Ni les régimes, ni les bas de compression ne font disparaître la graisse du lipœdème. Depuis octobre 2014, le Dr Houyoux l'élimine avec une canule qu'il a lui-même mise au point, en préservant au maximum la vascularisation et la trame conjonctive.</p>
-<blockquote class="lp-quote">« La douleur typique du lipoedème s’évanouit pour ne plus jamais revenir dans la zone traitée et c’est un réel soulagement pour toutes mes patientes. »<cite>Dr Stéphan Houyoux</cite></blockquote>
-<div class="lp-ctas"><a class="btn" href="#resultats">Voir les résultats</a><a class="btn line" href="#rdv">Demander un devis</a></div>
-</div>
-<figure class="lp-portrait reveal"><img src="portrait.jpg" width="500" height="500" alt="Portrait du Dr Stéphan Houyoux" fetchpriority="high">
-<figcaption><b>Dr Stéphan Houyoux</b>Centre de Liposculpture de Vich</figcaption></figure>
-</div>
-<div class="wrap"><ul class="lp-proof reveal">
-<li><b>2,5 mm</b><span>Canule Houyoux, trous de 1 mm</span></li>
-<li><b>Octobre 2014</b><span>Mise au point de la canule et de la technique</span></li>
-<li><b>Vich · Belgique</b><span>Consultations en Suisse et en Belgique</span></li>
-</ul></div></section>
 
-<!-- 2. Résultats : remarque préalable (texte exact du site) PUIS photos, ordre du site -->
-<section class="sec lp-results" id="resultats"><div class="wrap reveal">
-<div class="lp-head"><div class="kicker">Exemples de résultats</div><h2>Des résultats réels, photographiés au cabinet</h2></div>
-<p class="disclaimer-site"><b>Remarque préalable importante :</b> Les exemples photographiques repris ci-dessus ne représentent qu’un complément d’information au texte explicatif des techniques. Ces photos sont, évidemment, non retouchées et les interventions ont été réalisées par le Docteur Houyoux personnellement. Les patientes représentées ont marqué explicitement leur accord pour que le Docteur Houyoux puisse utiliser leurs photos à titre d’information. Elles ne peuvent aucunement être considérées comme une garantie de résultat, chaque cas devant être discuté individuellement.</p>
-
-<div class="zone"><div class="zone-h"><h3>Bas du corps</h3><span>3 cas</span></div>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="lip1.jpg" width="1332" height="607" alt="Bas du corps : avant, J+1, J+8" loading="lazy"></button><figcaption>La maîtrise de la liposculpture permet de diminuer la survenue d’ecchymoses et réduit l’inconfort de la période postopératoire.</figcaption></figure>
-<div class="pair">
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="lip2.jpg" width="1095" height="489" alt="Bas des fesses : avant, J+1, J+60" loading="lazy"></button><figcaption>Elle permet une véritable sculpture de zones réputées difficiles, comme le bas des fesses,</figcaption></figure>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="lip3.jpg" width="869" height="678" alt="Partie centrale des fesses : avant et après" loading="lazy"></button><figcaption>voire taboues en technique classique, comme la partie centrale des fesses.</figcaption></figure>
-</div></div>
-
-<div class="zone"><div class="zone-h"><h3>Bras</h3><span>Résultat et intervention</span></div>
-<figure class="shot narrow"><button class="zoom" aria-label="Agrandir"><img src="bras2.jpg" width="1000" height="519" alt="Bras : avant, J+1, J+90" loading="lazy"></button><figcaption>Ces résultats ont été obtenus uniquement à l’aide de la « canule Houyoux » (2 mm de diamètre)</figcaption></figure>
-<div class="strip">
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="debut-aspiration.jpg" width="529" height="778" alt="Début de l'aspiration" loading="lazy"></button></figure>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="fin-aspiration.jpg" width="1037" height="778" alt="Fin de l'aspiration, le Dr Houyoux au bloc opératoire" loading="lazy"></button></figure>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="postop-avant-bras.jpg" width="516" height="778" alt="Avant-bras à J+1" loading="lazy"></button></figure>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="postop-bras.jpg" width="516" height="778" alt="Bras à J+1" loading="lazy"></button></figure>
-</div>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="jw-face-20-mois.jpg" width="1440" height="663" alt="Évolution de face sur 20 mois" loading="lazy"></button></figure>
-<figure class="shot"><button class="zoom" aria-label="Agrandir"><img src="jw-dos-20-mois.jpg" width="1440" height="703" alt="Évolution de dos sur 20 mois" loading="lazy"></button></figure>
-</div>
-</div></section>
-
-<!-- 3. Comprendre le lipœdème -->
-<section class="sec grey" id="comprendre"><div class="wrap reveal">
-<div class="lp-head"><div class="kicker">Le lipœdème</div><h2>Un diagnostic simple, une douleur bien réelle</h2></div>
-<p class="lead">Le diagnostic de lipœdème est un diagnostic excessivement simple à poser d’un point de vue clinique pour quelqu’un connaissant le sujet, sans examens techniques complémentaires sophistiqués. Vous pouvez vous-même faire le diagnostic avec deux ou trois explications judicieuses.</p>
-<div class="lp-cards">
-<article class="lp-card"><span class="lp-num">01</span><h3>Les douleurs du lipœdème</h3><p>Les douleurs chroniques du lipoedème sont dues à la compression des vaisseaux profonds et des micro vaisseaux périphériques par la graisse et qui empêchent l’oxygénation correcte des tissus.</p></article>
-<article class="lp-card"><span class="lp-num">02</span><h3>Les traitements</h3><p>Dans le retour que j’ai de mes patientes, le port de bas de compression prôné par beaucoup aggrave les douleurs plutôt que de les soulager. Et c’est logique.</p></article>
-<article class="lp-card"><span class="lp-num">03</span><h3>La seule solution</h3><p>La seule manière de vous aider est d’enlever cette graisse qui, une fois constituée, est impossible à éliminer par équilibre alimentaire et exercices physiques, toutefois recommandés pour éviter l’aggravation de la situation.</p></article>
-</div>
-<blockquote class="lp-pull">« Comprimer la graisse n’a jamais fait perdre un gramme de cette graisse à sa propriétaire. »<cite>Dr Stéphan Houyoux</cite></blockquote>
-</div></section>
-
-<!-- 4. La technique Houyoux -->
-<section class="sec" id="technique"><div class="wrap lp-tech reveal">
-<div>
-<div class="kicker">La technique Houyoux</div><h2>Pourquoi ma technique est unique et respecte les tissus</h2>
-<p>La canule Houyoux de 2,5 mm de diamètre avec trou de 1 mm de diamètre, animée par le Lipomatic ou l’Evamatic de chez Euromi, permet d’éliminer cette graisse, tout en respectant au maximum la vascularisation et la trame conjonctive indispensable à la bonne rétractation cutanée dans le décours de l’intervention.</p>
-<p>Dans mon expérience de plus en plus importante dans le lipoedème, après la disparition des douleurs post opératoires normales, et qui dure de quelques jours à une quinzaine de jours, la douleur typique du lipoedème s’évanouit pour ne plus jamais revenir dans la zone traitée et c’est un réel soulagement pour toutes mes patientes. Elles en parlent d’ailleurs de plus en plus librement dans les associations ou les réseaux sociaux.</p>
-</div>
-<dl class="lp-specs">
-<div><dt>Canule</dt><dd>2,5 mm de diamètre, trou de 1 mm</dd></div>
-<div><dt>Moteur</dt><dd>Lipomatic ou Evamatic (Euromi)</dd></div>
-<div><dt>Respecte</dt><dd>La vascularisation et la trame conjonctive</dd></div>
-<div><dt>Permet</dt><dd>La bonne rétractation cutanée</dd></div>
-<div><dt>Depuis</dt><dd>Octobre 2014</dd></div>
-</dl>
-</div>
-<div class="wrap reveal"><blockquote class="lp-pull">« Ce soulagement est ma plus grande satisfaction, depuis que j’ai mis au point ma canule et la technique qu’elle permet de réaliser depuis Octobre 2014. »<cite>Dr Stéphan Houyoux</cite></blockquote></div>
-</section>
-
-<!-- 5. Vidéos de la canule -->
-<section class="sec grey"><div class="wrap reveal">
-<div class="lp-head"><div class="kicker">Intervention en vidéo</div><h2>La canule Houyoux en mouvement</h2></div>
-<p class="lead">Des images réelles, filmées au bloc opératoire par le Dr Houyoux.</p>
-<div class="vids">
-<figure><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Mouvement-de-la-canule-Houyoux-face-exterme-bas-de-jambes.mp4"></video><figcaption>Face externe, bas de jambes</figcaption></figure>
-<figure><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Face-interne-cuisse-lipoedeme-4.mp4"></video><figcaption>Face interne de la cuisse</figcaption></figure>
-<figure><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Face-interne-genou-lipoedeme-4.mp4"></video><figcaption>Face interne du genou</figcaption></figure>
+<section class="sec grey"><div class="wrap split reveal" style="align-items:start"><div>
+<div class="kicker">Le lipœdème</div><h2>Un diagnostic simple</h2>
+<p>Le diagnostic de lipœdème est excessivement simple à poser d'un point de vue clinique pour quelqu'un connaissant le sujet, sans examens techniques complémentaires sophistiqués. Vous pouvez vous-même faire le diagnostic avec deux ou trois explications judicieuses.</p></div>
+<div class="acc">
+<details open><summary>Les douleurs du lipœdème<i></i></summary><div class="body">Les douleurs chroniques du lipœdème sont dues à la compression des vaisseaux profonds et des micro-vaisseaux périphériques par la graisse, qui empêchent l'oxygénation correcte des tissus.</div></details>
+<details><summary>Les traitements<i></i></summary><div class="body">Dans le retour que j'ai de mes patientes, le port de bas de compression prôné par beaucoup aggrave les douleurs plutôt que de les soulager. Et c'est logique : comprimer la graisse n'a jamais fait perdre un gramme de cette graisse à sa propriétaire. La seule manière de vous aider est d'enlever cette graisse qui, une fois constituée, est impossible à éliminer par équilibre alimentaire et exercices physiques, toutefois recommandés pour éviter l'aggravation de la situation.</div></details>
 </div></div></section>
 
-<!-- 6. Vidéo 1h21 : s'informer avant la consultation (étape obligatoire) -->
-<section class="sec lp-video" id="video"><div class="wrap center reveal">
-<span class="must">Étape obligatoire · Avant votre consultation</span>
-<h2>S’informer avant la consultation</h2>
-<p class="lead">Voici le lien d’accès à la vidéo d’information indispensable à la bonne compréhension de ma technique. Nous vous rencontrerons bien volontiers en consultation après que vous ayez pris connaissance du contenu de cette vidéo. À bientôt.</p>
-<div class="yt"><iframe src="https://www.youtube.com/embed/ExnnBN8dYwo" title="Le lipœdème et la technique Houyoux, consultation d'information" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
-<p class="lp-dur">Durée 1h21 · partie théorique de la consultation du Dr Houyoux</p>
-<p class="after">Vous pouvez ensuite m’envoyer vos photos de face, profil et dos, pieds compris, avec votre poids, votre taille et les zones à traiter, pour un devis très précis. Je vous verrai ensuite personnellement. « Ce mode de fonctionnement nous fait gagner du temps à tous et nous permet de voir en consultation, plus de patientes souffrant de lipoedème. »</p>
-<a class="btn" href="#rdv">J’ai regardé la vidéo, je demande mon devis</a>
+<section class="sec"><div class="wrap center reveal">
+<div class="kicker">La technique Houyoux</div><h2>Éliminer la graisse, respecter les tissus</h2>
+<p class="lead">La canule Houyoux de 2,5 mm de diamètre, avec des trous de 1 mm, animée par le Lipomatic ou l'Evamatic de chez Euromi, permet d'éliminer cette graisse tout en respectant au maximum la vascularisation et la trame conjonctive, indispensable à la bonne rétraction cutanée.</p>
+<div class="cards three">
+<div class="card"><div class="n">2,5 mm</div><h3>Une canule unique</h3><p>Mise au point par le Dr Houyoux et utilisée depuis octobre 2014.</p></div>
+<div class="card"><div class="n">01</div><h3>Les vaisseaux respectés</h3><p>La vascularisation et la trame conjonctive sont préservées au maximum.</p></div>
+<div class="card"><div class="n">02</div><h3>La douleur s'évanouit</h3><p>Après les douleurs post-opératoires normales (de quelques jours à une quinzaine de jours), la douleur typique du lipœdème disparaît dans la zone traitée.</p></div>
+</div>
+<div class="quote" style="text-align:left">« La douleur typique du lipœdème disparaît progressivement* dans les quelques semaines qui suivent l'opération, après disparition de l'œdème post-opératoire dans la zone traitée, et c'est un réel soulagement pour toutes mes patientes. »<b>Dr Stéphan Houyoux</b><span style="display:block;font-style:normal;font-size:13px;color:#8a8a8a;margin-top:8px">* Sous réserve d'une hygiène de vie adéquate, elle ne reviendra pas.</span></div>
+<div class="kicker" style="margin-top:56px">Intervention en vidéo</div><h2>La canule Houyoux en mouvement</h2>
+
+<div class="vids">
+<figure><div class="vwrap"><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Mouvement-de-la-canule-Houyoux-face-exterme-bas-de-jambes.mp4"></video><div class="vveil"><b>Images d'intervention</b><span>Ces images peuvent heurter les personnes sensibles. Elles ont pour seul but de montrer la qualité de l'intervention et le respect des tissus.</span><button type="button">Voir la vidéo</button></div></div><figcaption>Face externe, bas de jambes</figcaption></figure>
+<figure><div class="vwrap"><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Face-interne-cuisse-lipoedeme-4.mp4"></video><div class="vveil"><b>Images d'intervention</b><span>Ces images peuvent heurter les personnes sensibles. Elles ont pour seul but de montrer la qualité de l'intervention et le respect des tissus.</span><button type="button">Voir la vidéo</button></div></div><figcaption>Face interne de la cuisse</figcaption></figure>
+<figure><div class="vwrap"><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Face-interne-genou-lipoedeme-4.mp4"></video><div class="vveil"><b>Images d'intervention</b><span>Ces images peuvent heurter les personnes sensibles. Elles ont pour seul but de montrer la qualité de l'intervention et le respect des tissus.</span><button type="button">Voir la vidéo</button></div></div><figcaption>Face interne du genou</figcaption></figure>
+</div></div></section>
+
+<section class="sec grey"><div class="wrap reveal">
+<div class="kicker">Exemples de résultats</div><h2>Évolution sur 20 mois</h2>
+<div class="gallery"><img src="https://dr-houyoux.ch/wp-content/uploads/2026/10/JW-face-evolution-sur-20-mois-scaled.png" alt="Évolution de face sur 20 mois"><img src="https://dr-houyoux.ch/wp-content/uploads/2026/10/JW-evolution-dos-20-mois-scaled.png" alt="Évolution de dos sur 20 mois"></div>
 </div></section>
 
+<section class="sec"><div class="wrap reveal">
+<div class="kicker">Votre démarche</div><h2>Comment se passe la prise en charge</h2>
+<div class="steps">
+<div class="step"><h3>Regardez la vidéo</h3><p>La vidéo ci-dessous (1h21) reprend la partie théorique de mes consultations. Nous vous rencontrerons bien volontiers après que vous en ayez pris connaissance.</p></div>
+<div class="step"><h3>Envoyez vos photos</h3><p>De face, de profil et de dos, pieds compris, avec votre poids, votre taille et les zones à traiter. Vous recevez un devis très précis.</p></div>
+<div class="step"><h3>Rencontrez le docteur</h3><p>Il vous voit personnellement pour vous donner son avis et répondre à vos questions. Rendez-vous auprès d'Eva au 079 596 63 04.</p></div>
+</div></div></section><section class="sec"><div class="wrap center reveal">
+<div class="kicker">Consultation d'information</div><h2>Étape indispensable avant la consultation</h2>
+<p class="lead">Avant de me rencontrer en personne, je vous demande de regarder cette vidéo : elle fait partie de la consultation. Afin de donner un maximum d'informations sur la liposculpture en général et le lipœdème en particulier, j'ai réalisé une vidéo de la partie théorique de mes consultations. Elle dure 1h21 et répondra à la majorité de vos questions, comme si vous assistiez vous-même à la consultation.</p>
+<div class="yt"><iframe src="https://www.youtube.com/embed/ExnnBN8dYwo" title="Le lipœdème et la technique Houyoux, consultation d'information" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+<p style="margin-top:20px"><span class="badge">Vidéo indispensable à la bonne compréhension de ma technique · 1h21</span></p></div></section>
 <section class="rdv" id="rdv"><div class="wrap"><h2>Prenez rendez-vous</h2>
-<p>Après avoir regardé la vidéo d’information, envoyez vos photos (face, profil, dos, pieds compris), votre poids, votre taille et les zones à traiter pour recevoir un devis très précis.</p>
+<p>Nous sommes là pour vous conseiller : nos informations vous guideront vers la solution la plus adaptée à votre budget et à vos besoins. Envoyez vos photos (face, profil, dos), votre poids, votre taille et les zones à traiter pour recevoir un devis précis.</p>
 <a class="btn" href="mailto:contact@dr-houyoux.ch">Demander un devis</a><a class="btn ghost" href="tel:+41795966304">Appeler Eva : 079 596 63 04</a></div></section>
+<a class="wa" href="https://wa.me/41795966304?text=Bonjour%2C%20je%20souhaiterais%20des%20informations%20sur%20une%20consultation%20avec%20le%20Dr%20Houyoux." target="_blank" rel="noopener" aria-label="Écrire au docteur sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.6 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg><span>Écrire au docteur sur WhatsApp</span></a>
 <footer>Centre de Liposculpture de Vich · Route de l'Etraz 12C, 1267 Vich · Centre et consultations +41 79 596 63 04 · Dr Stéphan Houyoux +41 79 870 63 70 · contact@dr-houyoux.ch</footer>
-<a class="lp-sticky" href="#rdv">Demander un devis</a>
-<dialog class="lightbox" aria-label="Photo agrandie"><button class="lb-close" aria-label="Fermer">×</button><img alt=""></dialog>
-<script src="app.js"></script></body></html>
+<script>document.querySelectorAll('[data-tabs]').forEach(function(root){
+  var btns=[].slice.call(root.querySelectorAll('.tabs button')),ind=root.querySelector('.tabs .ind');
+  function sel(b){btns.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);root.querySelector('#'+x.dataset.p).classList.toggle('on',on)});ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+(b.offsetLeft-4)+'px)'}
+  btns.forEach(function(b){b.addEventListener('click',function(){sel(b)})});sel(btns[0]);
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script><script>document.querySelectorAll('.vveil button').forEach(function(b){b.addEventListener('click',function(){var v=b.closest('.vveil');v.classList.add('off');var vid=v.parentNode.querySelector('video');if(vid){vid.play().catch(function(){})}})});</script></body></html>

@@ -1,69 +1,154 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liposculpture - Chirurgie esthétique - Dr Stéphan Houyoux</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
+<style>/* Maquette dr-houyoux.ch : codes du site actuel (Varela Round, Varela, Roboto, menthe)
+   + finitions inspirées d'Emil Kowalski (sobriété, transitions douces) */
+:root{--mint:#7ECBAB;--btn:#61CEAF;--btn-dark:#4FB596;--nav:#388B7E;--h:#347572;--text:#7A7A7A;--ink:#4B4F58;--bg:#F7F8F9;--line:#E4ECE9;
+--ease:cubic-bezier(.23,1,.32,1);--shadow:0 1px 2px rgba(52,117,114,.06),0 8px 24px -12px rgba(52,117,114,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Roboto,Arial,sans-serif;font-size:16px;line-height:1.8;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--nav)}
+figure{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.topbar{background:var(--mint);color:#fff;font-size:15px}
+.topbar .wrap{display:flex;justify-content:center;height:44px;align-items:center}
+.topbar span{padding:0 24px;border-left:1px solid rgba(255,255,255,.55)}
+.topbar span:first-child{border:0}
+.header{background:linear-gradient(90deg,#fff 0%,#fff 35%,#d4ebe1 65%,var(--mint) 100%);box-shadow:0 6px 16px -10px rgba(0,0,0,.3);position:relative;z-index:3}
+.header .wrap{max-width:1360px;display:flex;align-items:center;justify-content:space-between;height:120px}
+.header img.logo{height:92px;width:auto}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-family:'Varela Round',sans-serif;font-size:15px;font-weight:500;text-transform:uppercase;color:var(--nav);text-decoration:none;white-space:nowrap;position:relative;padding:6px 0}
+.nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--nav);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a.on::after{transform:scaleX(1)}
+@media (hover:hover){.nav a:not(.cta):hover::after{transform:scaleX(1)}}
+.btn,.nav a.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--btn);color:#fff;font-family:Roboto,sans-serif;font-weight:500;font-size:14px;letter-spacing:.6px;text-transform:uppercase;text-decoration:none;padding:14px 24px;border-radius:4px;transition:transform .16s var(--ease),background-color .2s}
+.btn:active,.nav a.cta:active{transform:scale(.97)}
+@media (hover:hover){.btn:hover,.nav a.cta:hover{background:var(--btn-dark)}}
+.banner{height:280px;background:linear-gradient(90deg,#5fae96 0%,#7ECBAB 55%,#a9dcc6 100%);display:flex;align-items:center;justify-content:center;position:relative}
+.banner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.25))}
+.banner h1{position:relative;margin:0;color:#fff;font-weight:100;font-size:clamp(60px,10vw,150px);letter-spacing:-4px;text-transform:uppercase;line-height:1}
+.sec{padding:96px 0}
+.sec.grey{background:var(--bg)}
+h2{font-family:Varela,sans-serif;font-weight:600;font-size:27px;color:var(--h);text-transform:uppercase;margin:0 0 18px;letter-spacing:.3px}
+h3{font-family:Varela,sans-serif;font-weight:600;font-size:19px;color:var(--h);margin:0 0 8px}
+.kicker{font-family:'Varela Round',sans-serif;color:var(--btn-dark);font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
+.lead{font-size:18px;max-width:760px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.split img{border-radius:10px;box-shadow:var(--shadow);background:#e9f1ee;min-height:260px;object-fit:cover}
+p{margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;text-align:left}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border-radius:12px;padding:26px 24px;box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+@media (hover:hover){.card:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(52,117,114,.06),0 18px 40px -18px rgba(52,117,114,.35)}}
+.card .n{font-weight:100;font-size:44px;line-height:1;color:var(--btn);margin-bottom:12px}
+.card p{font-size:15px;line-height:1.7;margin:0}
+.quote{border-left:3px solid var(--btn);background:var(--bg);border-radius:0 10px 10px 0;padding:24px 28px;margin-top:34px;font-size:17px;color:var(--ink);font-style:italic}
+.sec.grey .quote{background:#fff}
+.quote b{font-style:normal;color:var(--h);display:block;margin-top:10px;font-size:14px;font-family:'Varela Round'}
+.yt{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,60,55,.55);margin-top:36px;background:#1d2b28}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.vids video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;background:#1d2b28;box-shadow:var(--shadow)}
+.vids figcaption{font-size:14px;margin-top:8px;text-align:center}
+.badge{display:inline-flex;gap:8px;align-items:center;background:#E8F6F0;color:var(--h);border-radius:999px;padding:6px 14px;font-size:14px;font-family:'Varela Round'}
+.tabs{display:inline-flex;position:relative;background:#fff;border-radius:999px;padding:4px;margin:26px 0 30px;box-shadow:var(--shadow)}
+.tabs button{position:relative;z-index:1;border:0;background:transparent;font-family:'Varela Round';font-size:15px;color:var(--nav);padding:10px 22px;border-radius:999px;cursor:pointer;transition:color .25s}
+.tabs button[aria-selected=true]{color:#fff}
+.tabs .ind{position:absolute;top:4px;left:4px;height:calc(100% - 8px);border-radius:999px;background:var(--btn);transition:transform .35s var(--ease),width .35s var(--ease)}
+.panel{display:none}.panel.on{display:block;animation:in .45s var(--ease)}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.gallery img{width:100%;border-radius:10px;box-shadow:var(--shadow);background:#e9f1ee;min-height:200px;object-fit:cover}
+.note{font-size:13px;line-height:1.6;color:#9a9a9a;margin-top:24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.step{background:#fff;border-radius:12px;padding:26px 24px;box-shadow:var(--shadow);counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#E8F6F0;color:var(--h);font-family:'Varela Round';margin-bottom:14px}
+.step p{margin:0;font-size:15px;line-height:1.7}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-family:Varela;font-weight:600;color:var(--h);font-size:18px;text-transform:uppercase}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary i{width:28px;height:28px;border-radius:50%;background:#E8F6F0;position:relative;flex-shrink:0;transition:transform .3s var(--ease)}
+.acc summary i::before,.acc summary i::after{content:"";position:absolute;left:8px;right:8px;top:13px;height:2px;background:var(--h)}
+.acc summary i::after{transform:rotate(90deg)}
+.acc details[open] summary i{transform:rotate(45deg)}
+.acc .body{padding:0 0 22px}
+.rdv{background:linear-gradient(120deg,var(--mint),#a6dcc5);color:#fff;text-align:center;padding:80px 0}
+.rdv h2{color:#fff;font-size:34px}
+.rdv p{color:#f3fbf7;max-width:660px;margin:0 auto 28px;font-size:17px}
+.rdv .btn{background:#fff;color:var(--h);margin:6px}
+.rdv .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+footer{background:#3f4a48;color:#c9d3d0;text-align:center;font-size:14px;padding:28px}
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+@media (max-width:960px){.nav a:not(.cta){display:none}.split,.cards,.cards.three,.steps,.vids,.gallery{grid-template-columns:1fr}.sec{padding:64px 0}}
+
+.deonto{background:#fff;border:1px solid var(--line);border-left:4px solid var(--btn);border-radius:10px;padding:20px 24px;font-size:14px;line-height:1.7;color:#6a6a6a;margin:0 0 28px}
+.deonto b{display:block;color:var(--h);font-family:Varela;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.wa{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-family:Roboto,sans-serif;font-weight:500;font-size:15px;padding:13px 18px 13px 14px;border-radius:999px;box-shadow:0 10px 24px -8px rgba(0,0,0,.35);transition:transform .16s cubic-bezier(.23,1,.32,1)}.wa:active{transform:scale(.97)}.wa svg{width:24px;height:24px;flex-shrink:0}@media(max-width:600px){.wa span{display:none}.wa{padding:14px}}.vwrap{position:relative;border-radius:12px;overflow:hidden}.vwrap video{display:block}.vveil{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:22px;text-align:center;background:rgba(60,70,68,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#fff;font-size:14px;line-height:1.55;transition:opacity .35s cubic-bezier(.23,1,.32,1)}.vveil b{font-family:Varela;text-transform:uppercase;letter-spacing:1px;font-size:13px}.vveil button{border:0;background:#fff;color:#347572;font-family:Roboto,sans-serif;font-weight:500;font-size:14px;letter-spacing:.5px;text-transform:uppercase;padding:11px 22px;border-radius:4px;cursor:pointer;transition:transform .16s cubic-bezier(.23,1,.32,1)}.vveil button:active{transform:scale(.97)}.vveil.off{opacity:0;pointer-events:none}</style></head><body>
 <div class="topbar"><div class="wrap"><span>079 596 63 04</span><span>contact@dr-houyoux.ch</span><span>FR</span><span>EN</span></div></div>
-<header class="header"><div class="wrap"><a href="https://dr-houyoux.ch/"><img class="logo" src="logo.jpg" alt="Dr Stéphan Houyoux"></a>
-<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-<nav class="nav" id="menu"><a href="liposculpture.html" class="on">Liposculpture</a><a href="lipoedeme.html">Lipœdème</a><a href="https://dr-houyoux.ch/formations/">Formations</a><a href="https://dr-houyoux.ch/consultations-en-belgique/">Consultations en Belgique</a><a class="cta" href="#rdv">Demander un devis</a></nav></div></header>
-<section class="banner" style="background-image:url('banner.jpg')"><h1>Liposculpture</h1></section>
-
-<!-- Ouverture : visuel d'illustration (Unsplash, à valider avec le Dr Houyoux) + encart -->
-<section class="hero"><div class="wrap hero-grid reveal">
-<figure class="hero-img doc"><img src="portrait.jpg" width="500" height="500" alt="Portrait du Dr Stéphan Houyoux" fetchpriority="high"><figcaption><b>Dr Stéphan Houyoux</b>Centre de Liposculpture de Vich</figcaption></figure>
-<div class="encart"><div class="kicker">La canule Houyoux</div><h2>Pourquoi ma technique est unique et respecte les tissus</h2>
-<p>Fin 2014, après des années de recherches, j'ai mis au point une canule qui me permet de travailler avec une extrême précision dans les derniers millimètres de la couche graisseuse.</p><ul class="why"><li><b>Une canule de 2 mm, mise au point fin 2014</b><span>Percée de 6 trous de 1 mm, animée par le mouvement du Lipomatic.</span></li><li><b>Une précision extrême</b><span>Elle évolue en toute sécurité jusque dans la zone responsable de la peau d'orange.</span></li><li><b>Sous anesthésie locale</b><span>Avec une sédation consciente, en conservant la tonicité musculaire indispensable à la sculpture des courbes naturelles.</span></li><li><b>Strictement ambulatoire</b><span>Dans un bloc opératoire réservé aux interventions esthétiques en milieu privé.</span></li></ul>
-<a class="btn" href="#infos">Découvrir la technique</a></div>
-</div></section>
-
-<!-- 1. Technique de référence (aucune photo de patient avant la remarque préalable) -->
-<section class="sec" id="infos"><div class="wrap split reveal"><div>
+<header class="header"><div class="wrap"><a href="https://dr-houyoux.ch/"><img class="logo" src="https://dr-houyoux.ch/wp-content/uploads/2020/02/logo.png" alt="Dr Stéphan Houyoux"></a>
+<nav class="nav"><a href="liposculpture.html" class="on">Liposculpture</a><a href="lipoedeme.html">Lipœdème</a><a href="belgique.html">Consultations en Belgique</a><a class="cta" href="#rdv">Demander un devis</a></nav></div></header>
+<section class="banner"><h1>Liposculpture</h1></section>
+<section class="sec"><div class="wrap split reveal"><div>
 <div class="kicker">Liposculpture par Lipomatic / Tickle Lipo</div><h2>Ma technique de référence depuis 1997</h2>
 <p>Dès mes premières formations, je me passionne pour la liposculpture et décide de me perfectionner dans ce domaine en étudiant, chez différents confrères, les techniques qui me semblent les plus intéressantes.</p>
-<p>La vibroliposculpture avec le Lipomatic et l'hydrotomie selon Klein permettent d'avoir une approche beaucoup plus complète des problèmes de lipodystrophie déformant la silhouette de nos patients. J'utilise la vibroliposculpture, encore appelée Nutational Infrasonic Liposculpture, depuis 1997. Elle reste ma technique de référence. Elle a été introduite aux États-Unis en 2010 sous le nom de Tickle Lipo.</p></div>
-<div class="facts">
-<div><div class="n">1997</div><p>Vibroliposculpture par Lipomatic et hydrotomie selon Klein</p></div>
-<div><div class="n">2010</div><p>Introduction de la technique aux États-Unis sous le nom de Tickle Lipo</p></div>
-<div><div class="n">2014</div><p>Mise au point de la canule Houyoux</p></div>
-</div></div></section>
+<p>La vibroliposculpture avec le Lipomatic et l'hydrotomie selon Klein permettent d'avoir une approche beaucoup plus complète des problèmes de lipodystrophie déformant la silhouette de nos patients. J'utilise la vibroliposculpture, encore appelée Nutational Infrasonic Liposculpture, depuis 1997. Elle reste ma technique de référence. Elle a été introduite aux États-Unis en 2010 sous le nom de Tickle Lipo.</p>
+<span class="badge">Depuis 1997 · plus de 3 000 patients</span></div>
+<div class="quote" style="margin-top:0">« Il s'agit là d'une avancée majeure dans le domaine de la liposculpture. »<b>Dr Stéphan Houyoux</b></div></div></section>
 
-<!-- 2. Nouveauté : cellulite et canule Houyoux -->
 <section class="sec grey"><div class="wrap center reveal">
-<div class="kicker">Une nouveauté</div><h2>Le traitement de la cellulite</h2>
-<p class="lead">Depuis 1997 et la prise en main du Lipomatic, j'ai toujours été convaincu que cette technique me permettrait d'apporter une solution sur le long terme dans le traitement de la cellulite. Grâce à la canule Houyoux, il est aujourd'hui possible de travailler dans la zone responsable de la peau d'orange, pour un résultat durable.</p>
-<div class="quote" style="text-align:left">« Il s'agit là d'une avancée majeure dans le domaine de la liposculpture. »<b>Dr Stéphan Houyoux</b></div></div></section>
-
-<!-- 3. Résultats : remarque préalable PUIS photos, dans l'ordre exact de la page actuelle -->
-<section class="sec"><div class="wrap reveal">
-<div class="kicker">Exemples de résultats</div><h2>Des zones réputées difficiles</h2>
-<p class="disclaimer-site"><b>Remarque préalable importante :</b> Les exemples photographiques repris ci-dessus ne représentent qu’un complément d’information au texte explicatif des techniques. Ces photos sont, évidemment, non retouchées et les interventions ont été réalisées par le Docteur Houyoux personnellement. Les patientes représentées ont marqué explicitement leur accord pour que le Docteur Houyoux puisse utiliser leurs photos à titre d’information. Elles ne peuvent aucunement être considérées comme une garantie de résultat, chaque cas devant être discuté individuellement.</p>
-<nav class="chips" aria-label="Zones"><a href="#bas-du-corps">Bas du corps</a><a href="#zone-abdominale">Zone abdominale</a><a href="#bras">Bras</a><a href="#visage">Visage</a></nav>
-
-<div class="zone" id="bas-du-corps"><h3>Bas du corps</h3><div class="cases">
-<figure class="case"><img src="lip1.jpg" alt="Bas du corps, avant et après" loading="lazy"><figcaption>La maîtrise de la liposculpture permet de diminuer la survenue d'ecchymoses et réduit l'inconfort de la période postopératoire.</figcaption></figure>
-<figure class="case"><img src="lip2.jpg" alt="Bas des fesses, avant et après" loading="lazy"><figcaption>Elle permet une véritable sculpture de zones réputées difficiles, comme le bas des fesses,</figcaption></figure>
-<figure class="case"><img src="lip3.jpg" alt="Partie centrale des fesses, avant et après" loading="lazy"><figcaption>voire taboues en technique classique, comme la partie centrale des fesses.</figcaption></figure>
-</div></div>
-
-<div class="zone" id="zone-abdominale"><h3>Zone abdominale</h3><div class="cases">
-<figure class="case"><img src="lip5.jpg" alt="Zone abdominale, avant et après" loading="lazy"><figcaption>Elle améliore la rétraction de la peau, y compris lorsque celle-ci a perdu son élasticité naturelle, comme après la ménopause.</figcaption></figure>
-<figure class="case"><img src="ventre.jpg" alt="Ventre, avant et après" loading="lazy"><figcaption>Si la liposculpture n'est pas un traitement de l'obésité en l'absence de régime, elle peut contribuer, en association avec celui-ci, à retrouver une silhouette qui améliorera le bien-être de nos patients.</figcaption></figure>
-<figure class="case"><img src="ventre2.jpg" alt="Ventre, avant et après" loading="lazy"></figure>
-</div></div>
-
-<div class="zone" id="bras"><h3>Bras</h3><div class="cases">
-<figure class="case"><img src="bras1.jpg" alt="Bras, avant et après" loading="lazy"><figcaption>Ces résultats ont été obtenus uniquement à l'aide de la « canule Houyoux » (2 mm de diamètre).</figcaption></figure>
-<figure class="case"><img src="bras2.jpg" alt="Bras, avant et après" loading="lazy"></figure>
-</div></div>
-
-<div class="zone" id="visage"><h3>Visage</h3><div class="cases">
-<figure class="case"><img src="menton2.jpg" alt="Ovale du visage, avant et après" loading="lazy"><figcaption>Grâce à ces nouvelles techniques, on a pu élargir les indications de la liposculpture et améliorer les espérances de résultats dans des zones comme l'ovale du visage.</figcaption></figure>
-<figure class="case"><img src="lip4.jpg" alt="Avant et après" loading="lazy"></figure>
-</div></div>
+<div class="kicker">Ce qui rend ma méthode unique</div><h2>Une canule mise au point par le Dr Houyoux</h2>
+<p class="lead">Fin 2014, après des années de recherches, j'ai mis au point une canule qui me permet de travailler avec une extrême précision dans les derniers millimètres de la couche graisseuse.</p>
+<div class="cards">
+<div class="card"><div class="n">2 mm</div><h3>Une canule fine</h3><p>2 mm de diamètre, percée de 6 trous de 1 mm, animée par le mouvement du Lipomatic.</p></div>
+<div class="card"><div class="n">01</div><h3>Une précision extrême</h3><p>Elle évolue en toute sécurité jusque dans la zone responsable de la peau d'orange.</p></div>
+<div class="card"><div class="n">02</div><h3>Sous anesthésie locale</h3><p>Avec une sédation consciente : plus de confort, tout en conservant la tonicité musculaire indispensable à la sculpture des courbes naturelles.</p></div>
+<div class="card"><div class="n">03</div><h3>Strictement ambulatoire</h3><p>Dans un bloc opératoire réservé aux interventions esthétiques en milieu privé, ce qui permet d'éviter les infections nosocomiales.</p></div>
+</div>
 </div></section>
 
+<section class="sec"><div class="wrap split reveal"><div>
+<div class="kicker">Une nouveauté</div><h2>Le traitement de la cellulite</h2>
+<p>Depuis 1997 et la prise en main du Lipomatic, j'ai toujours été convaincu que cette technique me permettrait d'apporter une solution sur le long terme dans le traitement de la cellulite.</p>
+<p>Grâce à la canule Houyoux, il est aujourd'hui possible de travailler dans la zone responsable de la peau d'orange, pour un résultat durable.</p></div>
+<div class="card"><div class="n">Long terme</div><h3>Travailler la peau d'orange</h3><p>La canule Houyoux évolue jusque dans la zone responsable de la peau d'orange, pour une solution durable.</p></div></div></section>
+
+<section class="sec grey" data-tabs><div class="wrap reveal">
+<div class="kicker">Exemples de résultats</div><h2>Des zones réputées difficiles</h2>
+<div class="deonto"><b>Remarque préalable importante</b>Les exemples photographiques ne représentent qu'un complément d'information au texte explicatif des techniques. Ces photos sont non retouchées et les interventions ont été réalisées par le Docteur Houyoux personnellement. Les patientes représentées ont marqué explicitement leur accord pour que le Docteur Houyoux puisse utiliser leurs photos à titre d'information. Elles ne peuvent aucunement être considérées comme une garantie de résultat, chaque cas devant être discuté individuellement.</div>
+<div class="tabs" role="tablist"><span class="ind"></span><button role="tab" data-p="z1">Bas du corps</button><button role="tab" data-p="z2">Zone abdominale</button><button role="tab" data-p="z3">Bras</button><button role="tab" data-p="z4">Visage</button></div>
+<div class="panel" id="z1"><p class="lead">La maîtrise de la liposculpture permet de diminuer la survenue d'ecchymoses et réduit l'inconfort de la période postopératoire. Elle permet une véritable sculpture de zones réputées difficiles, comme le bas des fesses, voire taboues en technique classique, comme la partie centrale des fesses.</p>
+<div class="gallery"><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lip_avant_après1.png" alt=""><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_avant_après2.png" alt=""><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_avant_après3.png" alt=""><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_avant_après5.png" alt=""></div></div>
+<div class="panel" id="z2"><p class="lead">Elle améliore la rétraction de la peau, y compris lorsque celle-ci a perdu son élasticité naturelle, comme après la ménopause. Si la liposculpture n'est pas un traitement de l'obésité en l'absence de régime, elle peut contribuer, en association avec celui-ci, à retrouver une silhouette qui améliorera le bien-être de nos patients.</p>
+<div class="gallery"><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_ventre.png" alt=""><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_ventre2.jpg" alt=""></div></div>
+<div class="panel" id="z3"><p class="lead">Ces résultats ont été obtenus uniquement à l'aide de la « canule Houyoux » (2 mm de diamètre).</p>
+<div class="gallery"><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_bras-1.png" alt=""><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_bras2.jpg" alt=""></div></div>
+<div class="panel" id="z4"><p class="lead">Grâce à ces nouvelles techniques, on a pu élargir les indications de la liposculpture et améliorer les espérances de résultats dans des zones comme l'ovale du visage.</p>
+<div class="gallery"><img src="https://dr-houyoux.ch/wp-content/uploads/2020/02/lipo_menton2.jpg" alt=""></div></div>
+</div></section><section class="sec"><div class="wrap center reveal">
+<div class="kicker">Intervention en vidéo</div><h2>La canule Houyoux en mouvement</h2>
+
+<div class="deonto" style="text-align:left"><b>Remarque préalable importante</b>Ces vidéos ont été réalisées par le Docteur Houyoux personnellement, avec l'accord explicite des patientes. Elles ne peuvent aucunement être considérées comme une garantie de résultat, chaque cas devant être discuté individuellement.</div>
+<div class="vids">
+<figure><div class="vwrap"><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Mouvement-de-la-canule-Houyoux-face-exterme-bas-de-jambes.mp4"></video><div class="vveil"><b>Images d'intervention</b><span>Ces images peuvent heurter les personnes sensibles. Elles ont pour seul but de montrer la qualité de l'intervention et le respect des tissus.</span><button type="button">Voir la vidéo</button></div></div><figcaption>Face externe, bas de jambes</figcaption></figure>
+<figure><div class="vwrap"><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Face-interne-cuisse-lipoedeme-4.mp4"></video><div class="vveil"><b>Images d'intervention</b><span>Ces images peuvent heurter les personnes sensibles. Elles ont pour seul but de montrer la qualité de l'intervention et le respect des tissus.</span><button type="button">Voir la vidéo</button></div></div><figcaption>Face interne de la cuisse</figcaption></figure>
+<figure><div class="vwrap"><video controls preload="metadata" playsinline src="https://dr-houyoux.ch/wp-content/uploads/2026/10/Face-interne-genou-lipoedeme-4.mp4"></video><div class="vveil"><b>Images d'intervention</b><span>Ces images peuvent heurter les personnes sensibles. Elles ont pour seul but de montrer la qualité de l'intervention et le respect des tissus.</span><button type="button">Voir la vidéo</button></div></div><figcaption>Face interne du genou</figcaption></figure>
+</div>
+</div></section>
 <section class="rdv" id="rdv"><div class="wrap"><h2>Prenez rendez-vous</h2>
 <p>Nous sommes là pour vous conseiller : nos informations vous guideront vers la solution la plus adaptée à votre budget et à vos besoins. Envoyez vos photos (face, profil, dos), votre poids, votre taille et les zones à traiter pour recevoir un devis précis.</p>
 <a class="btn" href="mailto:contact@dr-houyoux.ch">Demander un devis</a><a class="btn ghost" href="tel:+41795966304">Appeler Eva : 079 596 63 04</a></div></section>
+<a class="wa" href="https://wa.me/41795966304?text=Bonjour%2C%20je%20souhaiterais%20des%20informations%20sur%20une%20consultation%20avec%20le%20Dr%20Houyoux." target="_blank" rel="noopener" aria-label="Écrire au docteur sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.6 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg><span>Écrire au docteur sur WhatsApp</span></a>
 <footer>Centre de Liposculpture de Vich · Route de l'Etraz 12C, 1267 Vich · Centre et consultations +41 79 596 63 04 · Dr Stéphan Houyoux +41 79 870 63 70 · contact@dr-houyoux.ch</footer>
-<script src="app.js"></script></body></html>
+<script>document.querySelectorAll('[data-tabs]').forEach(function(root){
+  var btns=[].slice.call(root.querySelectorAll('.tabs button')),ind=root.querySelector('.tabs .ind');
+  function sel(b){btns.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);root.querySelector('#'+x.dataset.p).classList.toggle('on',on)});ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+(b.offsetLeft-4)+'px)'}
+  btns.forEach(function(b){b.addEventListener('click',function(){sel(b)})});sel(btns[0]);
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script><script>document.querySelectorAll('.vveil button').forEach(function(b){b.addEventListener('click',function(){var v=b.closest('.vveil');v.classList.add('off');var vid=v.parentNode.querySelector('video');if(vid){vid.play().catch(function(){})}})});</script></body></html>
